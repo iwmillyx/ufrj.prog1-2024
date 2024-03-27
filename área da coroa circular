@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main () {
+    
+    float r1, r2, a1, a2, pi, at;
+    pi= 3.14;
+    
+    scanf("%f %f", &r1, &r2);
+    
+    a1 = pi*(r1*r1);
+    a2 = pi*(r2*r2);
+    at = a1-a2;
+    printf("%6.f", at);
+    
+    
+  
+    
+ return 0;   
+}
