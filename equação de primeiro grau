@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main () {
+    
+    float a, b, x;
+    
+    printf("Digite o valor de B: ");
+    scanf ("%f", &b);
+    
+    printf("Digite o valor de A: ");
+    scanf ("%f", &a);
+    
+    if(a==0){
+        printf("não tem raiz");
+    }
+    else{
+        x=(-b/a);
+    }
+    
+    printf("O resultado é: %1.f", x);
+    
+ return 0;   
+}
