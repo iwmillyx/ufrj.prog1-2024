@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    
+    printf("Me fale 2 numero: ");
+    scanf("%i %i", &x, &y);
+    
+    
+    if(x > 0 && y > 0){
+        printf("\nQuadrante 1");
+    } 
+    else if(x < 0 && y > 0){
+        printf("\nQuadrante 2");
+    } 
+    else if(x < 0 && y < 0){
+        printf("\nQuadrante 3");
+    }
+    else if(x > 0 && y < 0){
+        printf("\nQuadrante 4");
+    }
+    else if(x == 0 && y != 0){
+        printf("\nEixo y");
+    }
+    else if(x != 0 && y == 0){
+        printf("\nEixo x");
+    }
+    else{
+        printf("\nEixo x e Eixo y");
+    }
+
+    return 0;
+}
