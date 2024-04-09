@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int N, c, d, u, potencia_centena, potencia_dezena, potencia_unidade, soma_potencia;
+    
+    printf("Escolhe um numero inteiro de 3 digitos: ");
+    scanf("%i", &N);
+    
+    if(N < 100 || N > 999){
+        printf("Erro! O numero tem que ter 3 digitos, tente novamente\n");
+        return 1;
+    }
+    
+    c = N / 100;
+    d = (N /10) % 10;
+    u = N % 10;
+    
+    printf("\nCentena = %i\n", c);
+    printf("Dezena = %i\n", d);
+    printf("Unidade = %i\n", u);
+    
+    potencia_centena = pow(c, 3);
+    potencia_dezena = pow(d, 3);
+    potencia_unidade = pow(u, 3);
+    
+    soma_potencia = potencia_centena + potencia_dezena + potencia_unidade;
+    
+    if(soma_potencia == N){
+        printf("\na propriedade satisfaz porque é igual");
+    } else {
+        printf("a propriedade não satisfaz pois não é igual");
+    }
+    
+    return 0;
+}
