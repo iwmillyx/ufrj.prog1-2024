@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, nota3, media, maior1, maior2;
+    
+    printf("Digite as 3 notas: ");
+    scanf("%f %f %f", &nota1, &nota2, &nota3);
+    
+    
+    if(nota1 >= nota2 && nota1 >= nota3){
+        maior1 = nota1;
+        
+        if(nota2 >= nota3){
+            maior2 = nota2;
+        } else {
+            maior2 = nota3;
+        }
+    } else if(nota2 >= nota1 && nota2 >= nota3){
+        maior1 = nota2;
+        
+        if(nota1 >= nota3){
+            maior2 = nota1;
+        } else {
+            maior2 = nota3;
+        }
+    } else {
+        maior1 = nota3;
+        
+        if(nota1 >= nota2){
+            maior2 = nota1;
+        } else {
+            maior2 = nota2;
+        }
+    }
+    
+    media = (maior1 + maior2) / 2;
+    
+    printf("A media das duas maiores notas eh: %.2f\n", media);
+    
+    return 0;
+}
